@@ -3,6 +3,8 @@ from dash import dcc,html
 import plotly.graph_objs as go
 import pickle
 import json
+import sklearn
+
 from dash.dependencies import Input, Output, State
 from sklearn import (
     metrics,

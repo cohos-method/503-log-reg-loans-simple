@@ -31,10 +31,13 @@ with open('assets/rocauc.json', 'r') as f:
 print ("*** 2. Fig loaded...")
 
 def unpickleme(fname):
-    filename = open(fname, 'rb')
-    obj = pickle.load(filename)
-    filename.close()
-    return obj
+    try:
+        filename = open(fname, 'rb')
+        obj = pickle.load(filename)
+        filename.close()
+        return obj
+    except:
+        return None
 
 def buildOptionsDict(lbl, value):
     opt = []
